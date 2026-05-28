@@ -106,6 +106,7 @@ export function Autocomplete<T>(props: AutocompleteProps<T>) {
         onKeyDown={onKeyDown}
         role="combobox"
         aria-expanded={open}
+        maxLength={props.maxLength ?? 25}
       />
 
       {/* dropdown */}

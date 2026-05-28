@@ -20,4 +20,6 @@ export interface AutocompleteProps<T = unknown> {
   placeholder?: string;
 
   filterFn?: (option: AutocompleteOption<T>, query: string) => boolean;
+  
+  maxLength?: number;
 }

@@ -1,22 +1,9 @@
-// import { useState } from 'react'
-
-// import './App.css'
-
-// function App() {
-
-//   return (
-//     <>
-
-//     </>
-//   )
-// }
-
-// export default App
-
 import { useState } from "react";
 import { Autocomplete } from "./components/Autocomplete";
 import type { AutocompleteOption } from "./types/types";
 import './styles/styles.css';
+import './styles/queries.css';
+import './styles/general.css';
 
 const options: AutocompleteOption[] = [
   { value: 1, label: "React" },
@@ -52,6 +39,7 @@ export default function App() {
               label: input,
             })}
             placeholder="Select or create..."
+            maxLength={25}
             />
             
         </section>
