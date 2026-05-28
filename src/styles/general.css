@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(176, 197, 197);
+
+  font-size: 62.5%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 12rem;
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  padding: 3.2rem 3.2rem;
+  margin: 0 auto;
+}

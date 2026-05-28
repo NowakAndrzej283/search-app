@@ -1,0 +1,83 @@
+.ac-container {
+    width: 300px;
+    display: contents;
+    font-size: inherit;
+    color: #000;
+}
+
+.ac-selected {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+  
+  .ac-chip {
+    background: #eee;
+    padding: 0.4rem 0.4rem;
+    border-radius: 1.2rem;
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+  }
+  
+  .ac-chip button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .ac-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .ac-dropdown {
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 200px;
+    overflow: auto;
+  }
+  
+  .ac-item {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .ac-item.active {
+    background: #eee;
+  }
+  
+  .ac-create {
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+
+
+  /* HEADER */
+  .header{
+    background-color: aqua;
+    height: 20rem;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .header-primary{
+    padding: 2rem;
+    font-size: 5rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+  }
+  
+  /* SEARCH SECTION */
+  .search-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
