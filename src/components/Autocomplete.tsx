@@ -1,10 +1,12 @@
 import React from "react";
+import {useRef, useEffect} from 'react';
 import type { AutocompleteProps } from "../types/types";
 import { useAutocomplete } from "../hooks/useAutocomplete";
 import "../styles/styles.css";
 
 export function Autocomplete<T>(props: AutocompleteProps<T>) {
   const { value, placeholder } = props;
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
   const {
     input,
@@ -51,6 +53,22 @@ export function Autocomplete<T>(props: AutocompleteProps<T>) {
     }
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (!wrapperRef.current) return;
+  
+      if (!wrapperRef.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    };
+  
+    document.addEventListener("mousedown", handleClickOutside);
+  
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div className="ac-container">
       {/* selected items */}
@@ -61,8 +79,8 @@ export function Autocomplete<T>(props: AutocompleteProps<T>) {
             <button onClick={() => removeOption(v)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
+                width="24"
+                height="24"
                 fill="#000000"
                 viewBox="0 0 256 256"
                 className="ac-icon"
@@ -75,6 +93,7 @@ export function Autocomplete<T>(props: AutocompleteProps<T>) {
       </div>
 
       {/* input */}
+      <div className="ac-input-wrapper" ref={wrapperRef}>
       <input
         className="ac-input"
         value={input}
@@ -106,11 +125,13 @@ export function Autocomplete<T>(props: AutocompleteProps<T>) {
 
           {props.allowCreate && input && (
             <li className="ac-create" onMouseDown={createOption}>
-              + Create "{input}"
+              "{input}"
             </li>
           )}
         </ul>
       )}
+      </div>
     </div>
   );
 }
+

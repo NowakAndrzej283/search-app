@@ -16,14 +16,16 @@ export function useAutocomplete<T>(props: AutocompleteProps<T>) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const filteredOptions = useMemo(() => {
-    if (!input) return options;
-
-    return options.filter((o) =>
-      filterFn
-        ? filterFn(o, input)
-        : o.label.toLowerCase().includes(input.toLowerCase())
-    );
-  }, [input, options, filterFn]);
+    const selectedValues = new Set(value.map(v => v.value));
+  
+    return options
+      .filter(o => !selectedValues.has(o.value))
+      .filter(o =>
+        filterFn
+          ? filterFn(o, input)
+          : o.label.toLowerCase().includes(input.toLowerCase())
+      );
+  }, [input, options, value, filterFn]);
 
   const selectOption = (option: AutocompleteOption<T>) => {
     const exists = value.some((v) => v.value === option.value);

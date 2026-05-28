@@ -22,6 +22,8 @@ const options: AutocompleteOption[] = [
   { value: 1, label: "React" },
   { value: 2, label: "TypeScript" },
   { value: 3, label: "Node.js" },
+  { value: 4, label: "MongoDB" },
+  { value: 5, label: "Jenkins" },
 ];
 
 export default function App() {
@@ -33,6 +35,9 @@ export default function App() {
         <h1 className="header-primary">React Autocomplete Task</h1>
         <p className="subheading">
           Choose the options that you want or create your own!
+        </p>
+        <p className="signature">
+          project by andrzej nowak
         </p>
       </header>
       <main>
@@ -48,6 +53,7 @@ export default function App() {
             })}
             placeholder="Select or create..."
             />
+            
         </section>
       </main>
     </>
