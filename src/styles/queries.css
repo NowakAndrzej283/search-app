@@ -1,0 +1,47 @@
+/* BELOW 848px (Laptops) */
+@media (max-width: 53em) {
+  /* 7 / 16 */
+  html {
+    font-size: 50%;
+  }
+}
+/* BELOW 672px (Smaller Laptops) */
+@media (max-width: 42em) {
+  /* 6 / 16 */
+  html {
+    font-size: 43.75%;
+  }
+  .header-primary {
+    font-size: 4rem;
+  }
+  .subheading {
+    font-size: 2.8rem;
+  }
+}
+/* BELOW 560px (Smaller Laptops) */
+@media (max-width: 35em) {
+  /* 5 / 16 */
+  html {
+    font-size: 31.25%;
+    background-image: none;
+  }
+  .header-primary {
+    font-size: 4rem;
+  }
+  .subheading {
+    font-size: 2.8rem;
+  }
+  .search-section {
+    grid-template-columns: 1fr;
+  }
+}
+/* BELOW 400px (Smartphones) */
+@media (max-width: 25em) {
+  .header-primary {
+    font-size: 3rem;
+  }
+  .subheading {
+    font-size: 2.2rem;
+    margin: 0 4rem;
+  }
+}
