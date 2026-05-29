@@ -1,4 +1,6 @@
 # Generic Autocomplete Component
+[![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge)](https://nowakandrzej283.github.io/search-app/#)
+
 
 A reusable and accessible Autocomplete component built with React and TypeScript.
 
@@ -127,6 +129,11 @@ Possible future enhancements:
 * custom option rendering
 * grouped options
 * React Portal dropdown rendering
+
+---
+
+# Live Demo
+[View Webiste](https://nowakandrzej283.github.io/coffee-shop/#)
 
 ---
 
