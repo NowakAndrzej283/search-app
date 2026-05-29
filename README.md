@@ -93,8 +93,8 @@ src/
      queries.css
   types/
      types.ts
-  App.tsx
-  index.html
+App.tsx
+index.html
 ```
 
 ---
