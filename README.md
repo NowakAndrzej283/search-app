@@ -1,73 +1,136 @@
-# React + TypeScript + Vite
+# Generic Autocomplete Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A reusable and accessible Autocomplete component built with React and TypeScript.
 
-Currently, two official plugins are available:
+The component supports:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* selecting predefined items
+* dynamic creation of new options
+* keyboard navigation
+* accessibility features
+* reusable generic typing
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Features
 
-## Expanding the ESLint configuration
+* Generic TypeScript implementation
+* Dynamic option creation
+* Keyboard navigation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+  * Arrow Up
+  * Arrow Down
+  * Enter
+  * Escape
+* Click outside detection
+* Remove selected items
+* Prevent duplicate selections
+* Accessible ARIA attributes
+* No external autocomplete libraries
+* Configurable API-first design
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* React
+* TypeScript
+* Vite
+* CSS
+* HTML
+
+---
+
+# Installation
+
+```bash
+bun install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# Run Development Server
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+bun run dev
 ```
+
+---
+
+# Build Project
+
+```bash
+bun run build
+```
+
+---
+
+# Accessibility
+
+The component includes:
+
+* `role="combobox"`
+* `role="listbox"`
+* `role="option"`
+* `aria-expanded`
+* `aria-selected`
+
+Keyboard navigation is fully supported.
+
+---
+
+# Project Structure
+
+```txt
+src/
+  components/
+     Autocomplete.tsx 
+  hooks/
+     useAutocomplete.ts
+  styles/
+     styles.css
+     general.css
+     queries.css
+  types/
+     types.ts
+  App.tsx
+  index.html
+```
+
+---
+
+# AI Usage
+
+AI assistance was used during:
+
+* API design
+* architecture planning
+* accessibility improvements
+* keyboard navigation implementation
+* edge case handling
+
+The full AI interaction log is available in:
+
+```txt
+ai-logs.md
+```
+
+---
+
+# Future Improvements
+
+Possible future enhancements:
+
+* async data loading
+* debounced search
+* virtualization for large datasets
+* custom option rendering
+* grouped options
+* React Portal dropdown rendering
+
+---
+
+# Author
+Andrzej Nowak 
+
+
